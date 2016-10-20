@@ -145,9 +145,7 @@
       README.md
     </h3>
 
-      <article class="markdown-body entry-content" itemprop="text">
-
-<h1><a id="user-content-developer-hand-book" class="anchor" href="#developer-hand-book" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Developer Hand Book</h1>
+      <article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-developer-hand-book" class="anchor" href="#developer-hand-book" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Developer Hand Book</h1>
 
 <h2><a id="user-content-git-command" class="anchor" href="#git-command" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Git Command</h2>
 
@@ -288,6 +286,45 @@ origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
 origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
 upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (fetch)
 upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (push)</pre></div>
+
+<h2><a id="user-content-to-delete-git-branch-from-localremote" class="anchor" href="#to-delete-git-branch-from-localremote" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>To Delete git branch from local/remote</h2>
+
+<ul>
+<li>Moveout from brach which you like to delete, checkout any other branch.
+Example: I like to delete dev_0.1 branch. So i checkout master branch</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>git branch
+git checkout <span class="pl-k">&lt;</span>branch_name<span class="pl-k">&gt;</span> 
+git branch -d <span class="pl-k">&lt;</span>delete_branch_name<span class="pl-k">&gt;</span> //Use -D instead to force deletion without checking merged status
+git branch
+git push origin --delete <span class="pl-k">&lt;</span>delete_branch_name<span class="pl-k">&gt;</span> // This will push changes <span class="pl-k">in</span> remote branch.</pre></div>
+
+<p>Like:</p>
+
+<div class="highlight highlight-source-shell"><pre>git checkout master
+git branch -d dev_0.1
+git push origin --delete dev_0.1</pre></div>
+
+<h3><a id="user-content-stash-your-local-chagnes" class="anchor" href="#stash-your-local-chagnes" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>stash your local chagnes</h3>
+
+<p>-Use this if you like to save your local changes but dont want to commit until its not completed and do some work on other branch.</p>
+
+<div class="highlight highlight-source-shell"><pre>git stash list // show list of stash code.
+git stash // Create stash
+git stash pop //Pop your stash code</pre></div>
+
+<p>Example:</p>
+
+<div class="highlight highlight-source-shell"><pre>git checkout dev_0.1
+.... Made some changes on code.
+git stash
+git checkout master
+git checkout dev_0.1
+git stash pop   
+// Pop all <span class="pl-k">local</span> changes on which i kept save <span class="pl-k">in</span> stash but not commited and <span class="pl-k">continue</span> my work from there.</pre></div>
+
+
 </article>
   </div>
 

@@ -1,17 +1,30 @@
 <div class="container repohead-details-container"></div>
 <div class="container">
-    
+     
 <nav class="reponav js-repo-nav js-sidenav-container-pjax" itemscope="" itemtype="http://schema.org/BreadcrumbList" role="navigation" data-pjax="#js-repo-pjax-container">
 
   <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
-    <a href="/git" aria-selected="true" class="js-selected-navigation-item reponav-item selected" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /prashantkoshta/developer-hand-book" itemprop="url">
-      <span itemprop="name"><strong><i>Git</i></strong></span>
+    <a href="/git" <% if(page_name == "git") {%>aria-selected="true"<%}%> class="js-selected-navigation-item reponav-item <% if(page_name == "git") {%>selected<%}%>" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /prashantkoshta/developer-hand-book" itemprop="url">
+      <span itemprop="name">
+		 <% if(page_name == "git") {%>
+			<strong><i>Git</i></strong>
+		 <%} else {%>
+			Git
+		 <%}%>
+		
+	  </span>
       <meta itemprop="position" content="1">
 </a>  </span>
 
     <span itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
-      <a href="/linux" class="js-selected-navigation-item reponav-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /prashantkoshta/developer-hand-book/issues" itemprop="url">
-        <span itemprop="name">Linux</span>
+      <a href="/linux" <% if(page_name == "linx") {%>aria-selected="true"<%}%>  class="js-selected-navigation-item reponav-item <% if(page_name == "linux") {%>selected<%}%>" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /prashantkoshta/developer-hand-book/issues" itemprop="url">
+        <span itemprop="name">
+			 <% if(page_name == "linux") {%>
+				<strong><i>Linux</i></strong>
+			 <%} else {%>
+				Linux
+			 <%}%>
+		</span>
         <meta itemprop="position" content="2">
 </a>    </span>
 

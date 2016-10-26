@@ -13,10 +13,13 @@ app.engine('.html', ejs.renderFile);
 
 
 app.get("/",function(req,res){
-	res.render('git/index.html');
+	res.render('git/index.html',{page_name:"git"});
 });
 app.get("/git",function(req,res){
-	res.render('git/index.html');
+	res.render('git/index.html',{page_name:"git"});
+});
+app.get("/linux",function(req,res){
+	res.render('linux/index.html',{page_name:"linux"});
 });
 
 app.listen(app.get('port'), function() {

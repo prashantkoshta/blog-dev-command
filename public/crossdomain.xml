@@ -2,7 +2,7 @@
 <!DOCTYPE cross-domain-policy 
   SYSTEM "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd">
 <cross-domain-policy>
-  <allow-access-from domain="googleads.g.doubleclick.net" />
-  <allow-access-from domain="pagead2.googlesyndication.com" />
+  <allow-access-from domain="*.g.doubleclick.net" />
+  <allow-access-from domain="*.googlesyndication.com" />
   <allow-access-from domain="google-analytics.com" />
 </cross-domain-policy>

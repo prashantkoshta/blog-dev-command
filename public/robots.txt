@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /test
+Allow: /git
+Allow: /linux
+Allow: /assests/style.css
+Allow: /assets/page.css
+Allow: /assets/page.min.css

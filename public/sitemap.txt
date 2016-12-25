@@ -1,0 +1,5 @@
+http://devcli.com
+http://devcli.com/git
+http://devcli.com/linux
+http://devcli.com/sitemap.html
+http://devcli.com/sitemap.txt

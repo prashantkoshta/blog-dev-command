@@ -27,8 +27,8 @@
     	<meta name="robots" content="all">
 	<meta name="googlebot" content="all">
 	  
-	<% include ./../googles/g-analytics.html %>
-	<% include ./../googles/g-adsense.html %>
+	<% include ./googles/g-analytics.html %>
+	<% include ./googles/g-adsense.html %>
 	
 
      
@@ -68,10 +68,12 @@
 
     <h1 class="public ">
 
-  <strong itemprop="name"><a href="#" data-pjax="#js-repo-pjax-container">Developer Hand Book on Commands</a></strong>
+  <strong itemprop="name">
+    <a href="#" data-pjax="#js-repo-pjax-container">Developer Hand Book on Commands</a>
+  </strong>
 
 </h1>
-	<% include ./../page-navbar.html %>
+	<% include ./page-navbar.html %>
   </div>
 
 </div>
@@ -82,7 +84,13 @@
     
 <div class="repository-meta js-details-container">
   <span class="repository-meta-content">
-        <span itemprop="about"> Set of commands with short and sweet way. To keep handy.</span>
+        <span><strong>Site Map</strong></span>
+        <span itemprop="about">
+          <ul>
+            <li><a href="/git">Git</a></li>
+            <li><a href="/linux">Linux</a></li>
+          </ul>
+        </span>
   </span>
 
     <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="#" class="edit-repository-meta js-edit-repository-meta" data-form-nonce="15742bce1091720d1624bdb4c0068cd6190b4865" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="put" /><input name="authenticity_token" type="hidden" value="yYB2TzcToC+qJmjiGaRxJVju9w798bJL+qKMIlzhYfF8rM3MlgqwUQPNn9CN4Qtz3XelRQSbFYc5N8J/w6362Q==" /></div>
@@ -128,11 +136,7 @@
   </div>
 
 
-		
-	<% include ./content/gads-placeholder.html %>
-   <% include ./content/page-data.html %>
-  
-  
+
   
   
   
@@ -149,7 +153,7 @@
 
     </div>
 
-        	<% include ./../page-footer.html %>
+        <% include ./page-footer.html %>
  
   </body>
 </html>

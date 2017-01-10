@@ -1,8 +1,41 @@
-<h1>
-  {{title}}
-</h1>
-<nav>
-      <a routerLink="git">Git</a>
-      <a routerLink="linux">Linux</a>
-    </nav>
-<router-outlet></router-outlet>
+<md-sidenav-layout fullscreen>
+
+  <md-sidenav #sidenav>
+    <md-list>
+          <md-list-item *ngFor="let item of menuItem">
+            <a class="menu-list" [routerLink]="[item.action]" (click)="sidenav.toggle()">{{item.label}}</a>
+          </md-list-item>
+          <md-list-item>
+            <h6>Copy right @ 2017</h6>
+          </md-list-item>
+    </md-list>
+  </md-sidenav>
+
+
+
+
+  <md-toolbar color="primary">
+    <button class="app-icon-button" (click)="sidenav.toggle()">
+      <i class="material-icons app-toolbar-menu">menu</i>
+    </button>
+    <span>Developer CLI</span>
+    <button md-button (click)="naviagteTo('info')">Contact Us</button>
+  </md-toolbar>
+
+  <div class="app-content">
+    <router-outlet></router-outlet>
+  </div>
+
+</md-sidenav-layout>
+
+
+
+<!--span class="app-action">
+  <md-grid-list cols="1" rowHeight="20px">
+    <md-grid-tile>Copy Right @2017| <a routerLink="/info/sitemap">Site Map</a></md-grid-tile>
+  </md-grid-list>
+</span-->
+
+<!-- span class="app-action" [class.m2app-dark]="isDarkTheme">
+  <button md-fab><md-icon>check circle</md-icon></button>
+</span-->

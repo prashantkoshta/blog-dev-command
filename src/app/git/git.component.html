@@ -7,18 +7,924 @@
   </md-card>
 
   <md-card>
-    <md-card-content>
-          <p><strong>Set your identity for first time user. So it show your name and details when you commit. </strong></p>
-          <p class="codebg">
-            <code>
-              git config --global user.name "Your Name" \n
-              git config --global user.email abcdefs@example.com
-            </code>
-          </p>
-    </md-card-content>
-    <md-card-actions>
-          <button md-button>LIKE</button>
-          <button md-button>SHARE</button>
-    </md-card-actions>
-</md-card>
+      <md-card-content>
+            <p class="sub-heading"><strong>Set your identity for first time user. So it show your name and details when you commit. </strong></p>
+            <div class="codebg">
+              <div>
+                <code>
+                  git config --global user.name "Your Name"
+                </code>
+              </div>
+              <div>
+                <code>
+                  git config --global user.email abcdefs@example.com
+                </code>
+              </div>
+            </div>
+      </md-card-content>
+      
+  </md-card>
+
+  <md-card>
+      <md-card-content>
+            <p class="sub-heading"><strong>To clone particular branch of git</strong></p>
+            <div class="codebg">
+              <div>
+                <code>
+                 git clone -b &lt;branch_name&gt; &lt;remote_repo&gt;(git@github.com:prashantkoshta/angularjs-dashboard.git)
+                </code>
+              </div>
+            </div>
+      </md-card-content>
+  </md-card>
+
+  <md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                To checkout particular branch
+              </strong>
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  git checkout &lt;branch_name&gt;
+                </code>
+              </div>
+            </div>
+      </md-card-content>
+  </md-card>
+
+<md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                    To create new branch form existing branch.
+              </strong>
+            </p>
+            <ul>
+              <li>
+                Checkout branch from which you want to create new branch. Like i checkout master and from master i am createing new branch <span class="wordbg">dev_0.1</span>
+              </li>
+            </ul>
+            <div class="codebg">
+              <div>
+                <code>
+                  git checkout &lt;exiting_branch_name&gt;
+                </code>
+              </div>
+              <div>
+                <code>
+                  git checkout -b &lt;new_branch_name&gt;
+                </code>
+              </div>
+              <div>
+                <code>
+                  git push &lt;remote-name&gt; &lt;branch_name&gt;
+                </code>
+              </div>
+              </div>
+              <p>
+                Where <span class="wordbg">&lt;remote-name&gt;</span> is typically origin, the name which git gives to the remote you cloned from. Example:
+              </p>
+
+              <div class="codebg">
+              <div>
+                <code>
+                  git checkout master
+                </code>
+              </div>
+              <div>
+                <code>
+                  git checkout -b dev_0.1
+                </code>
+              </div>
+              <div>
+                <code>
+                  git push origin dev_0.1
+                </code>
+              </div>
+              </div>
+      </md-card-content>
+  </md-card>
+
+
+  <md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                To commit changes on git
+              </strong>
+            </p>
+            <ul>
+              <li>
+                check git status
+              </li>
+            </ul>
+            <div class="codebg">
+              <div>
+                <code>
+                  git status
+                </code>
+              </div>
+            </div>
+
+            <ul>
+              <li>
+                add modifed files. <span class="wordbg">.</span> show add all modified files. If you need to add specific file give file name instead of <span class="wordbg">.</span>.
+              </li>
+            </ul>
+            <div class="codebg">
+              <div>
+                <code>
+                  git add .
+                </code>
+              </div>
+            </div>
+
+            <ul>
+              <li>
+               Check file status
+              </li>
+            </ul>
+            <div class="codebg">
+              <div>
+                <code>
+                  git status
+                </code>
+              </div>
+            </div>
+
+            <ul>
+              <li>
+                Commit changes
+              </li>
+            </ul>
+            <div class="codebg">
+              <div>
+                <code>
+                  git commit -m "&lt;YOUR_COMMENTS_ON_COMMIT&gt;"
+                </code>
+              </div>
+            </div>
+
+            <ul>
+              <li>
+                Push changes
+              </li>
+            </ul>
+            <div class="codebg">
+              <div>
+                <code>
+                  git push
+                </code>
+              </div>
+            </div>
+      </md-card-content>
+  </md-card>
+
+
+
+  <md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                To pull changes into local from remote branch.
+              </strong>
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  git pull
+                </code>
+              </div>
+            </div>
+      </md-card-content>
+  </md-card>
+
+
+<md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                Set Beyond Compare as difftool for git.
+              </strong>
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  git config --global diff.tool bc3
+                </code>
+              </div>
+              <div>
+                <code>
+                  git config --global difftool.bc3.path "C:/Program Files (x86)/Beyond Compare 3/BCompare.exe"
+                </code>
+              </div>
+            </div>
+      </md-card-content>
+  </md-card>
+
+  <md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                Show last log. -4 show last 4 logs.
+              </strong>
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  git log -4
+                </code>
+              </div>
+            </div>
+      </md-card-content>
+  </md-card>
+
+
+<md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                To check file difference by BC tool.
+              </strong>
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  git difftool
+                </code>
+              </div>
+            </div>
+      </md-card-content>
+  </md-card>
+
+
+  <md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                To check difference between local version with remote version.
+              </strong>
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  git fetch origin
+                </code>
+              </div>
+              <div>
+                <code>
+                  git diff &lt;branch_name&gt; origin/&lt;branch_name&gt;
+                </code>
+              </div>
+            </div>
+            <p>
+              If difftool already set then
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  git fetch origin
+                </code>
+              </div>
+              <div>
+                <code>
+                  git difftool &lt;branch_name&gt; origin/&lt;branch_name&gt;
+                </code>
+              </div>
+            </div>
+      </md-card-content>
+  </md-card>
+
+
+<md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                To clean untracked git file
+              </strong>
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  git clean -df
+                </code>
+              </div>
+            </div>
+      </md-card-content>
+  </md-card>
+
+
+  <md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                To reset local version with remote branch (revert local changes)
+              </strong>
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  git reset --hard HEAD
+                </code>
+              </div>
+            </div>
+      </md-card-content>
+  </md-card>
+
+  <md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                Show list of file changed form last commit. If you like to see previos 2 then use <span class="wordbg">HEAD~2</span>.
+              </strong>
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  git diff --name-only HEAD HEAD~1
+                </code>
+              </div>
+            </div>
+      </md-card-content>
+  </md-card>
+
+  <md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                Merging branch and solving conflicts
+              </strong>
+            </p>
+            <p>
+              Assuming you have 2 branch master and dev_0.1. dev_0.1 is 2 commit behind the master. Now we have to merge master changes into dev_0.1. So my dev_0.1 will includ all master recent changes.
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  git checkout &gt;branch_name&lt; Like dev_0.1
+                </code>
+              </div>
+              <div>
+                <code>
+                  git merge &lt;remote_name&gt;/&lt;branch_name&gt; Like git merge orgin/master
+                </code>
+              </div>
+            </div>
+            <ul>
+              <li>
+                  It may show confilit or auto merge changes.
+              </li>
+              <li>
+                  If it show confilit then your branch bash path show like <span class="wordbg">(dev_0.1|MERGING)</span>. In this case we have confilict on code. It dispaly like this in confilict files.
+              </li>
+            </ul>
+
+
+            <div class="codebg">
+              <div>
+                <code>
+                  <<<<<<< HEAD
+                </code>
+              </div>
+             <div>
+                <code>
+                  res.send("Hello world now");
+                </code>
+              </div>
+              <div>
+                <code>
+                  =======
+                </code>
+              </div>
+              <div>
+                <code>
+                 res.send("Hello World Master Change");
+                </code>
+              </div>
+              <div>
+                <code>
+                 >>>>>>> origin/master
+                </code>
+              </div>
+            </div>
+
+            <ul>
+              <li>
+                Next step remove confilict from files and chek file status and commit then push.
+              </li>
+            </ul>
+
+            <div class="codebg">
+              <div>
+                <code>
+                  git status
+                </code>
+              </div>
+              <div>
+                <code>
+                  git commit -m "&lt;YOUR_COMMENTS_ON_COMMIT&gt;"
+                </code>
+              </div>
+              <div>
+                <code>
+                  git push
+                </code>
+              </div>
+            </div>
+
+      </md-card-content>
+  </md-card>
+
+
+<md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                To see the current configured remote repository for your fork.
+              </strong>
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  git remote -v
+                </code>
+              </div>
+              <div>
+                <code>
+                  origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
+                </code>
+              </div>
+              <div>
+                <code>
+                  origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+                </code>
+              </div>
+            </div>
+      </md-card-content>
+  </md-card>
+
+  <md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                To add upstream in your fork to push changes into main respositroy from your fork repository.
+              </strong>
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  git remote add upstream https://github.com/octocat/Spoon-Knife.git
+                </code>
+              </div>
+            </div>
+            <p> </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  git remote -v
+                </code>
+              </div>
+
+              <div>
+                <code>
+                  origin https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
+                </code>
+              </div>
+              <div>
+                <code>
+                  origin https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+                </code>
+              </div>
+              <div>
+                <code>
+                    upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (fetch)
+                </code>
+              </div>
+              <div>
+                <code>
+                  upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (push)
+                </code>
+              </div>
+
+            </div>
+      </md-card-content>
+  </md-card>
+
+
+<md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                To Delete git branch from local/remote
+              </strong>
+            </p>
+            <ul>
+              <li>
+                Moveout from brach which you like to delete, checkout any other branch. Example: I like to delete dev_0.1 branch. So i checkout master branch
+              </li>
+            </ul>
+            <div class="codebg">
+              <div>
+                <code>
+                  git branch
+                </code>
+              </div>
+              <div>
+                <code>
+                  git checkout &lt;branch_name&gt;
+                </code>
+              </div>
+              <div>
+                <code>
+                  git branch -d &lt;delete_branch_name&gt; //Use -D instead to force deletion without checking merged status
+                </code>
+              </div>
+              <div>
+                <code>
+                  git branch
+                </code>
+              </div>
+              <div>
+                <code>
+                  git push origin --delete &lt;delete_branch_name&gt; // This will push changes in remote branch.
+                </code>
+              </div>
+            </div>
+
+            <p>
+            Like:
+          <p>
+
+            <div class="codebg">
+              <div>
+                <code>
+                  git checkout master
+                </code>
+              </div>
+              <div>
+                <code>
+                  git branch -d dev_0.1
+                </code>
+              </div>
+              <div>
+                <code>
+                  git push origin --delete dev_0.1
+                </code>
+              </div>
+            </div>
+
+      </md-card-content>
+  </md-card>
+
+  
+<md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                stash your local chagnes
+              </strong>
+            </p>
+            <p>
+              Use this if you like to save your local changes but dont want to commit until its not completed and do some work on other branch.
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  git stash list // show list of stash code.
+                </code>
+              </div>
+              <div>
+                <code>
+                  git stash // Create stash
+                </code>
+              </div>
+              <div>
+                <code>
+                  git stash pop //Pop your stash code
+                </code>
+              </div>
+            </div>
+            <p>
+              Example:
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  git checkout dev_0.1
+                </code>
+              </div>
+              <div>
+                <code>
+                  .... Made some changes on code.
+                </code>
+              </div>
+              <div>
+                <code>
+                  git stash
+                </code>
+              </div>
+              <div>
+                <code>
+                  git checkout master
+                </code>
+              </div>
+              <div>
+                <code>
+                  git checkout dev_0.1
+                </code>
+              </div>
+              <div>
+                <code>
+                  git stash pop 
+                </code>
+              </div>
+              <div>
+                <code>
+                  // Pop all local changes on which i kept save in stash but not commited and continue my work from there.
+                </code>
+              </div>
+            </div>
+      </md-card-content>
+  </md-card>
+
+  <md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                Set env variable in window by git bash
+              </strong>
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  export JAVA_HOME="/C/Program Files/Java/jdk1.7.0_79"
+                </code>
+              </div>
+              <div>
+                <code>
+                  echo $JAVA_HOME
+                </code>
+              </div>
+            </div>
+      </md-card-content>
+  </md-card>
+
+  <md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                Set environment variable in git base
+              </strong>
+            </p>
+            <ul>
+              <li>
+                  Go to git bash home directory. It is genrally C:\Users\user_name
+              </li>
+            </ul>
+            <div class="codebg">
+              <div>
+                <code>
+                  touch .bashrc
+                </code>
+              </div>
+            </div>
+            <ul>
+              <li>
+                  Edit <span class="wordbg">.bashrc</span> with required env variables
+              </li>
+            </ul>
+            <div class="codebg">
+              <div>
+                <code>
+                  export JAVA_HOME="/C/Program Files/Java/jdk1.7.0_79"
+                </code>
+              </div>
+              <div>
+                <code>
+                  export GRADLE_HOME="/C/Users/gradle-2.10"
+                </code>
+              </div>
+              <div>
+                <code>
+                  export ANDROID_HOME="/C/Users/android-sdk-windows"
+                </code>
+              </div>
+              <div>
+                <code>
+                  export MAVEN_LOCAL_DIR=$ANDROID_HOME/extras/android/m2repository
+                </code>
+              </div>
+              <div>
+                <code>
+                  export PATH=$PATH:$JAVA_HOME/bin:$GRADLE_HOME/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platforms
+                </code>
+              </div>
+              
+            </div>
+      </md-card-content>
+  </md-card>
+
+  <md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                Working with fork and upstream
+              </strong>
+            </p>
+            <ul>
+              <li>
+                Check upstream branch
+              </li>
+            </ul>
+            <div class="codebg">
+              <div>
+                <code>
+                  git remote -v
+                </code>
+              </div>
+            </div>
+            <ul>
+              <li>
+                Add upstream branch into fork
+              </li>
+            </ul>
+            <div class="codebg">
+              <div>
+                <code>
+                  git remote add upstream https://github.com/test/test-demo.git
+                </code>
+              </div>
+            </div>
+            <ul>
+              <li>
+                Get upstream branh into fork, which is not present in fork.
+              </li>
+            </ul>
+            <div class="codebg">
+              <div>
+                <code>
+                  git fetch upstream
+                </code>
+              </div>
+              <div>
+                <code>
+                  git checkout &lt;UPSTREAM_BRANCH_NAME&gt;
+                </code>
+              </div>
+              <div>
+                <code>
+                  git push origin <&lt;PSTREAM_BRANCH_NAME&gt; // It will add branch in fork repository
+                </code>
+              </div>
+            </div> 
+            <ul>
+              <li>
+                Reset local changes in fork repository branch with upstream branch
+              </li>
+            </ul>
+            <div class="codebg">
+              <div>
+                <code>
+                  git reset --hard upstream/&lt;BRANCH_NAME&gt;
+                </code>
+              </div>
+            </div>
+            <ul>
+              <li>
+                pull changes from upstream branch to fork repo branch
+              </li>
+            </ul>
+            <div class="codebg">
+              <div>
+                <code>
+                  git pull upstram &lt;branch_name&gt;  // Fix confilicts if you get any.
+                </code>
+              </div>
+              <div>
+                <code>
+                  git add .
+                </code>
+              </div>
+              <div>
+                <code>
+                  git commit -m "&lt;COMMENTS&gt;"
+                </code>
+              </div>
+              <div>
+                <code>
+                  git push origin &lt;BRANCH_NAME&gt;
+                </code>
+              </div>
+            </div>
+              <ul>
+              <li>
+                To merge upstream changes into fork branch / syncing a fork
+
+              </li>
+            </ul>
+            <div class="codebg">
+              <div>
+                <code>
+                  git fetch upstream
+                </code>
+              </div>
+              <div>
+                <code>
+                  git diff upstream/&lt;BRANCH_NAME&gt; origin/&lt;BRANCH_NAME&gt;
+                </code>
+              </div>
+              <div>
+                <code>
+                  git merge upstream/&lt;BRANCH_NAME&gt;  // Fix confilicts if you get any.
+                </code>
+              </div>
+              <div>
+                <code>
+                  git status
+                </code>
+              </div>
+              <div>
+                <code>
+                  git add .
+                </code>
+              </div>
+              <div>
+                <code>
+                  git status
+                </code>
+              </div>
+              <div>
+                <code>
+                  git commit -m "&lt;COMMENTS&gt;"
+                </code>
+              </div>
+              <div>
+                <code>
+                  git push origin &lt;BRANCH_NAME&gt;
+                </code>
+              </div>
+            </div>
+            <ul>
+              <li>
+                To abort rebase skip or continue
+              </li>
+            </ul>
+            <div class="codebg">
+              <div>
+                <code>
+                  git rebase --continue
+                </code>
+              </div>
+              <div>
+                <code>
+                  git rebase --skip
+                </code>
+              </div>
+              <div>
+                <code>
+                  git rebase --abort // it move to dev_0.1 from (dev_0.1|REBASE 2/3) 
+                </code>
+              </div>
+            </div>
+
+      </md-card-content>
+  </md-card>
+
+  <md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                Revert changes in git branch
+              </strong>
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  git log
+                </code>
+              </div>
+              <div>
+                <code>
+                  git revert --no-commit 5fde377..HEAD // 5fde377 commit number
+                </code>
+              </div>
+              <div>
+                <code>
+                  git commit -m "Revert changes"
+                </code>
+              </div>
+              <div>
+                <code>
+                  git push
+                </code>
+              </div>
+              
+            </div>
+      </md-card-content>
+  </md-card>
+
+
 </div>

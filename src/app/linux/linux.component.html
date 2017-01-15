@@ -1,3 +1,436 @@
-<p>
-  linux works!
-</p>
+<div class="box">
+  <md-card>
+    <md-card-title>Linux Commands</md-card-title>   
+    <md-card-content>
+          <p>Set of commands with short and sweet way. To keep handy.</p>
+    </md-card-content>
+  </md-card>
+
+  <md-card>
+      <md-card-content>
+            <p class="sub-heading"><strong>
+              To See environemnt variable
+              </strong></p>
+            <div class="codebg">
+              <div>
+                <code>
+                  printenv
+                </code>
+              </div>
+              <div>
+                <code>
+                 echo $path
+                </code>
+              </div>
+            </div>
+      </md-card-content>
+      
+  </md-card>
+
+  <md-card>
+      <md-card-content>
+            <p class="sub-heading"><strong>Set envirnment variable</strong></p>
+            <div class="codebg">
+              <div>
+                <code>
+                export JAVA_HOME=/c/java
+                </code>
+              </div>
+              <div>
+                <code>
+                export path=$path:$JAVA_HOME/bin
+                </code>
+              </div>
+            </div>
+      </md-card-content>
+  </md-card>
+
+  <md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+               Find file
+              </strong>
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  find ./&lt;DIR_NAME&gt; -name '*.ext'
+                </code>
+              </div>
+            </div>
+      </md-card-content>
+  </md-card>
+
+<md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                    Present working directory
+              </strong>
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  pwd
+                </code>
+              </div>
+              
+              </div>
+      </md-card-content>
+  </md-card>
+
+
+  <md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                Change directory
+              </strong>
+            </p>
+            
+            <div class="codebg">
+              <div>
+                <code>
+                  cd ./home
+                </code>
+              </div>
+              <div>
+                <code>
+                  cd ~ \\ to root directoy
+                </code>
+              </div>
+            </div>
+
+      </md-card-content>
+  </md-card>
+
+
+
+  <md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                ls command - List directory contents
+              </strong>
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  ls
+                </code>
+              </div>
+              <div>
+                <code>
+                  ls -lrash
+                </code>
+              </div>
+            </div>
+            <p>
+              Some useful options are -l, -a, -s, -h and -R where</p>
+            <ul>
+              <li>
+                -l will give you a long listing (as explained above) 
+              </li>
+              <li>
+                -a will show you ALL the files in the directory, including hidden files
+              </li>
+              <li>
+                -R will the subdirectories recursively, which means it will show all the directories and files within the specified directory.
+              </li>
+              <li>
+                -s will also show you the size of the files (in blocks, not bytes) 
+              </li>
+              <li>
+                -h will show the size in "human readable format" (ie: 4K, 16M, 1G etc). Of course you must use this option in conjunction with the -s option.
+
+              </li>
+            </ul>
+      </md-card-content>
+  </md-card>
+
+
+<md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+               Help Manual
+              </strong>
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  man mv
+                </code>
+              </div>
+              
+            </div>
+      </md-card-content>
+  </md-card>
+
+  <md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+               Remove Directoy and file
+              </strong>
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  rm -rf ./temp
+                </code>
+              </div>
+            </div>
+      </md-card-content>
+  </md-card>
+
+
+<md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                grep command
+              </strong>
+            </p>
+            <p>
+              The grep command is used to search text or searches the given file for lines containing a match to the given strings or words.
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                  grep 'word' file1 file2 file3
+                </code>
+              </div>
+              <div>
+                <code>
+                 grpe -r 'Hello World' ./dir_name  //  read all files under each directory for search 'Hello World'
+                </code>
+              </div>
+            </div>
+      </md-card-content>
+  </md-card>
+
+
+  <md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                Common
+              </strong>
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                 celar // Clear terminal
+                </code>
+              </div>
+              <div>
+                <code>
+                 echo "Test1" //echo message on scrren
+                </code>
+              </div>
+              <div>
+                <code>
+                  mkdir //Create new folder(s)
+                </code>
+              </div>
+              <div>
+                <code>
+                 ps //process status
+                </code>
+              </div>
+              <div>
+                <code>
+                 rmdir //remove directory
+                </code>
+              </div>
+              <div>
+                <code>
+                 rm //remove files
+                </code>
+              </div>
+              <div>
+                <code>
+                 whoami // Print the current user id and name (`id -un')
+                </code>
+              </div>
+              <div>
+                <code>
+                 who //Print all usernames currently logged in
+                </code>
+              </div>
+              <div>
+                <code>
+                 man //help manual
+                </code>
+              </div>
+              <div>
+                <code>
+                 mv ./soruce ./target Move or rename files or directories
+                </code>
+              </div>
+              <div>
+                <code>
+                 mount //Mount a file system
+                </code>
+              </div>
+              <div>
+                <code>
+                 kill  // to kill process by PID
+                </code>
+              </div>
+            </div>
+      </md-card-content>
+  </md-card>
+
+
+<md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                vi Editor
+              </strong>
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                 vi file.txt  //Open file in vi editor
+                </code>
+              </div>
+            </div>
+            <p>
+              Help on vi editor
+            </p>
+            <ul>
+              <li>
+                i insert text before cursor, until hit
+              </li>
+              <li>
+                I insert text at beginning of current line, until hit
+              </li>
+              <li>
+                ^f for forward screen
+              </li>
+              <li>
+                ^b for backward screen
+              </li>
+              <li>
+                Esc+ :wq for save and quit
+              </li>
+              <li>
+                Esc+ :q! for quit without save.
+              </li>
+            </ul>
+      </md-card-content>
+  </md-card>
+
+
+  <md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+               Create or Extract tar file
+              </strong>
+            </p>
+            <p>
+              Create
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                 tar -cvf tarfilename.tar /path/to/directory  // Crate tar of give driectory
+                </code>
+              </div>
+              <div>
+                <code>
+                 tar -cvf tarfilename.tar /path/to/file-1 /path/to/file-2 //To create an archive of certfain files
+                </code>
+              </div>
+              <div>
+                <code>
+                 tar -cvf tarfilename.tar /path/to/directory --exclude="*.png" //To exclude certian file from tar.
+                </code>
+              </div>
+            </div>
+            <p>
+              Extract
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                 tar -xvf tar_file.tar
+                </code>
+              </div>
+              <div>
+                <code>
+                 tar -xvf tar_file.tar
+                </code>
+              </div>
+              <div>
+                <code>
+                 tar -xvf tar_file.tar bin // Extract a single directory called bin,
+                </code>
+              </div>
+            </div>
+            <p>
+              To see file and directory in tar without extract
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                tar -tf tar_filename.tar
+                </code>
+              </div>
+            </div>
+
+      </md-card-content>
+  </md-card>
+
+
+<md-card>
+      <md-card-content>
+            <p class="sub-heading">
+              <strong>
+                chmod command - To change permission
+              </strong>
+            </p>
+            <p>
+              chmod u=rwx,g=rx,o=r myfile -Where, The letters u, g, and o stand for "user", "group", and "other" and the letters "r", "w", and "x" stand for "read", "write", and "execute".
+            </p>
+            <p>
+              Each digit is a combination of the numbers 4, 2, 1 and 0.
+            </p>
+            <ul>
+              <li>
+                4 stands for "read"
+              </li>
+              <li>
+                2 stands for "write"
+              </li>
+              <li>
+                1 stands for "execute"
+              </li>
+              <li>
+                0 stands for "no permission."
+              </li>
+      
+            </ul>
+            <p>
+              So 750 mean U- (4+2+1) rwx, G- (0+4+1) rx, O-(0+0+0) NO permission
+            </p>
+            <div class="codebg">
+              <div>
+                <code>
+                 chmod 755 ./temp 
+                </code>
+              </div>
+              
+            </div>
+      </md-card-content>
+  </md-card>
+
+ 
+
+
+</div>

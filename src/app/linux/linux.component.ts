@@ -4,7 +4,7 @@ import {Title} from '@angular/platform-browser'
 @Component({
   selector: 'app-linux',
   templateUrl: './linux.component.html',
-  styleUrls: ['./linux.component.css']
+  styleUrls: ['./linux.component.scss']
 })
 export class LinuxComponent implements OnInit {
 

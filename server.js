@@ -3,13 +3,13 @@ var path = require('path');
 var ejs = require('ejs');
 var express = require('express');
 var compression = require('compression')
+var oneDay = 60 * 60 * 24 * 31 * 12 * 10;
 var app = express();
-app.use(compression())
-
+app.use(compression());
 app.enable('etag');
 app.set('etag', 'strong');
 app.set('port', (process.env.PORT || 5000));
-app.use(express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + '/dist', { maxAge: oneDay }));
 
 /*
 app.set('views', __dirname + '/private');

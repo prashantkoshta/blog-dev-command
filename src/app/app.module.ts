@@ -11,6 +11,7 @@ import {AppRoutes} from './app.routing';
 
 import { ContactusComponent } from './contactus/contactus.component';
 import { Pagestatus404Component } from './shared/pagestatus404/pagestatus404.component';
+import { GadsenseComponent } from './shared/utils/gadsense/gadsense.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { Pagestatus404Component } from './shared/pagestatus404/pagestatus404.com
     AppComponent,
     HomeComponent,
     Pagestatus404Component,
+    GadsenseComponent
   ],
   imports: [
     BrowserModule,

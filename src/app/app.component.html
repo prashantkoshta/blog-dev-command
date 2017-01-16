@@ -3,7 +3,7 @@
   <md-sidenav #sidenav>
     <md-list>
           <md-list-item *ngFor="let item of menuItem">
-            <a class="menu-list" [routerLink]="[item.action]" (click)="sidenav.toggle()">{{item.label}}</a>
+            <a class="menu-list" [ngClass]="{'selected': (selectedMenu === item.label)?true:false}" [routerLink]="[item.action]" (click)="sidenav.toggle();">{{item.label}}</a>
           </md-list-item>
           <md-list-item>
             <h6>Copy Right @2017</h6>
@@ -19,7 +19,7 @@
       <i class="material-icons app-toolbar-menu">menu</i>
     </button>
     <span>Developer CLI</span>
-    <button md-button (click)="naviagteTo('info')">Contact Us</button>
+    <button md-button (click)="naviagteTo('info');">Contact Us</button>
   </md-toolbar>
 
   <div class="app-content">

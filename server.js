@@ -2,7 +2,9 @@ var fs = require('fs');
 var path = require('path');
 var ejs = require('ejs');
 var express = require('express');
+var compression = require('compression')
 var app = express();
+app.use(compression())
 
 app.enable('etag');
 app.set('etag', 'strong');

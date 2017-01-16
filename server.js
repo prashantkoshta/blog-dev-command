@@ -28,6 +28,11 @@ app.get("/sitemap.html",function(req,res){
 	res.render('sitemap.html',{page_name:"sitemaap"});
 });
 */
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/public/index.html'));
+});
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });

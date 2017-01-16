@@ -10,22 +10,19 @@ import { HomeComponent } from './home/home.component';
 import {AppRoutes} from './app.routing';
 
 import { ContactusComponent } from './contactus/contactus.component';
-import { Pagestatus404Component } from './shared/pagestatus404/pagestatus404.component';
-import { GadsenseComponent } from './shared/utils/gadsense/gadsense.component';
-
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    Pagestatus404Component,
-    GadsenseComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     AppRoutes,
+    SharedModule,
     MaterialModule.forRoot()
   ],
   providers: [],

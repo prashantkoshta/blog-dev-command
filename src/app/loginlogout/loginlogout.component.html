@@ -1,0 +1,25 @@
+<form novalidate [formGroup]="loginFrom" (submit)="onLogin()">
+<div class="box">
+  <md-card>
+    <md-card-title>Signin</md-card-title>   
+    <md-card-content>
+          <div>
+              <md-input md-input class="from-input" id="loginNameId"  formControlName="loginName" type="text" placeholder="Enter Userid or Emailid" value="">
+                  <md-hint align="start" [ngStyle]="{'color': 'red'}" *ngIf="displayMessage.loginName">{{displayMessage.loginName}}</md-hint>
+              </md-input>
+          </div>
+          <br />
+          <div>
+              <md-input md-input class="from-input"  id="loginPasswordId" formControlName="loginPassword" type="password" placeholder="Enter Password" value="">
+                  <md-hint [ngStyle]="{'color': 'red'}" align="start" *ngIf="displayMessage.loginPassword">{{displayMessage.loginPassword}}</md-hint>
+              </md-input>
+          </div>
+          <br />
+          <div>
+              <button md-raised-button color="primary" type="submit" [disabled]="!loginFrom.valid">Login</button>
+              <button md-button>Cancel</button>
+          </div>
+    </md-card-content>
+  </md-card>
+</div>
+</form>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Router,NavigationEnd,NavigationStart,NavigationError} from '@angular/router';
+import { Router,NavigationEnd,NavigationStart,NavigationError } from '@angular/router';
 import { CliUtils } from './shared/utils/cliutils';
 declare let ga: Function;
 

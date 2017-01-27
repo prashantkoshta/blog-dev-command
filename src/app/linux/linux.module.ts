@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {LinuxRoutes} from './linux.routing'
-import { LinuxComponent } from './linux.component';
+import {LinuxComponent } from './linux.component';
 import {MaterialModule} from '@angular/material';
 import { SharedModule } from '../shared/shared.module';
 

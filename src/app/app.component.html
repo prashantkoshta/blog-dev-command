@@ -19,7 +19,8 @@
       <i class="material-icons app-toolbar-menu">menu</i>
     </button>
     <span>Developer CLI</span>
-    <button md-button (click)="naviagteTo('info');">Contact Us</button>
+    <button *ngIf="!isLoggedIn" md-button (click)="naviagteTo('login');">Sign in</button>
+    <button *ngIf="isLoggedIn" md-button (click)="logout();">Sign out</button>
   </md-toolbar>
 
   <div class="app-content">

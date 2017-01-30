@@ -5,6 +5,7 @@ import { MaterialModule } from '@angular/material';
 import { LoginlogoutComponent } from './loginlogout.component';
 import { LoginLogoutRoutes } from './loginlogout.routing';
 import { SharedModule } from '../shared/shared.module';
+import { LoginlogoutService } from './loginlogout.service'
 
 
 @NgModule({
@@ -17,6 +18,12 @@ import { SharedModule } from '../shared/shared.module';
     SharedModule
   ],
   declarations: [
+    LoginlogoutComponent
+  ],
+  providers:[
+    LoginlogoutService
+  ],
+  exports:[
     LoginlogoutComponent
   ]
 })

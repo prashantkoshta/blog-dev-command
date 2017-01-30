@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-import {MaterialModule} from '@angular/material';
+import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 import { HomeComponent } from './home/home.component';
 import { AppRoutes } from './app.routing';
 import { ContactusComponent } from './contactus/contactus.component';
 import { SharedModule } from './shared/shared.module';
+import {CommunicationService} from './shared/service/communication.service';
+import { CommonService } from './shared/service/common.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,10 @@ import { SharedModule } from './shared/shared.module';
     SharedModule,
     MaterialModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    CommunicationService,
+    CommonService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
